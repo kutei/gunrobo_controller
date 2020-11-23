@@ -9,7 +9,6 @@ class JoyToCmd:
         self.cmd_vel = Twist()
 
     def joy_callback(self, data):
-        rospy.loginfo("koko")
         self.cmd_vel.linear.x = data.axes[3]
         self.cmd_vel.angular.z = data.axes[2]
 

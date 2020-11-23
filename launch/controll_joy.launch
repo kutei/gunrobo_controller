@@ -4,7 +4,7 @@
 
     <group ns="$(arg robot_name)">
         <node name="joy" pkg="joy" type="joy_node" />
-        <node name="joy_to_cmd" pkg="gunrobo_controller" type="joy_to_cmd.py">
+        <node name="joy_to_cmd" pkg="gunrobo_controller" type="joy_to_cmd.py" output="screen">
             <remap from="/joy" to="/$(arg robot_name)/joy"/>
             <remap from="/cmd_vel" to="/$(arg robot_name)/gunrobo_controller/cmd_vel"/>
         </node>
